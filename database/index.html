@@ -50,8 +50,8 @@
         <ul class="nav-menu">
           <li class="menu-active"><a href="#hero">Home</a></li>
           <li><a href="#services">MySQL</a></li>
-          <li><a href="#portfolio">DML</a></li>
-          <li><a href="#team">DDL</a></li>
+          <li><a href="#portfolio">DML & DDL</a></li>
+          <li><a href="#team"FULL TEXT SEARCH</a></li>
           <li><a href="#contact">About Creator</a></li>
         </ul>
       </nav><!-- #nav-menu-container -->
@@ -190,6 +190,34 @@ Kekurangan MySQL<br>
               SELECT Nama, Nilai, AVG(Nilai)<br>
               FROM Mahasiswa<br>
               GROUP BY Nama, Nilai;</p><br>
+              <br><br>
+          
+              <h3 class="section-title">DML</h3>
+              <p align="justify-content-left">
+                <p>
+                Pengertian DDL<br>
+            
+                <br>DDL adalah singkatan dari Data Definition Language yaitu kumpulan perintah pada SQL untuk menggambarkan desain dari database secara menyeluruh, selain itu DDL (Data Definition Language) juga digunakan untuk membuat, merubah maupun menghapus struktur atau definisi tipe data dari obyek yang ada pada database.
+                <br>
+                <br>Fungsi DDL (Data Definition Language)
+                <br>DDL (Data Definition Language) berfungsi untuk membuat, merubah dan menghapus struktur data pada database.
+                <br>
+                <br>Berikut adalah perintah-perintah pada DDL (Data Definition Language)
+                <br>1. Perintah Create / Membuat
+                <br>Create database berfungsi untuk membuat database baru
+                <br>Create Function berfungsi untuk membuat fungsi pada database
+                <br>Create index berfungsi untuk membuat index pada database
+                <br>Create procedur berfungsi untuk membuat procedure pada data dase
+                <br>Create Table yaitu perintah yang digunakan untuk membuat tabel baru pada database
+                <br>Create Trigger berfungsi untuk membuat trigger pada database
+                <br>
+                <br>2. Perintah untuk merubah
+                <br>Alter Table yaitu perintah yang digunakan untuk merubah struktur dari sebuah tabel
+                <br>
+                <br>3. Perintah untuk menghapus / Drop
+                <br>Drop Database yaitu perintah yang berfungsi untuk menghapus database (Contoh: DROP nama_databases;)
+                <br>Drop Table yaitu perintah yang digunakan untuk menghapus tabel pada database
+                <br>
           </div>
         </div>
 
@@ -202,35 +230,28 @@ Kekurangan MySQL<br>
     <section id="team">
       <div class="container wow fadeInUp">
         <div class="section-header">
-          <h3 class="section-title">DDL</h3>
-          <p >
-              Pengertian DDL<br>
-            
-              <br>DDL adalah singkatan dari Data Definition Language yaitu kumpulan perintah pada SQL untuk menggambarkan desain dari database secara menyeluruh, selain itu DDL (Data Definition Language) juga digunakan untuk membuat, merubah maupun menghapus struktur atau definisi tipe data dari obyek yang ada pada database.
-              <br>
-              <br>Fungsi DDL (Data Definition Language)
-              <br>DDL (Data Definition Language) berfungsi untuk membuat, merubah dan menghapus struktur data pada database.
-              <br>
-              <br>Berikut adalah perintah-perintah pada DDL (Data Definition Language)
-              <br>1. Perintah Create / Membuat
-              <br>Create database berfungsi untuk membuat database baru
-              <br>Create Function berfungsi untuk membuat fungsi pada database
-              <br>Create index berfungsi untuk membuat index pada database
-              <br>Create procedur berfungsi untuk membuat procedure pada data dase
-              <br>Create Table yaitu perintah yang digunakan untuk membuat tabel baru pada database
-              <br>Create Trigger berfungsi untuk membuat trigger pada database
-              <br>
-              <br>2. Perintah untuk merubah
-              <br>Alter Table yaitu perintah yang digunakan untuk merubah struktur dari sebuah tabel
-              <br>
-              <br>3. Perintah untuk menghapus / Drop
-              <br>Drop Database yaitu perintah yang berfungsi untuk menghapus database (Contoh: DROP nama_databases;)
-              <br>Drop Table yaitu perintah yang digunakan untuk menghapus tabel pada database
+          <h3 class="section-title">FULL TEXT SEARCH</h3>
+          <p>
+              <br> Full Text Searching merupakan proses pencarian data pada database Mysql.
+              <br> A. Cara Mengaktifkan fasilitas fulltext-search antara lain :
+              <br> 1.CREATE TABLE post ( id int(4) NOT NULL AUTO_INCREMENT,
+              <br> title varchar(255) NOT NULL,
+              <br> post_content text,
+              <br> PRIMARY KEY (id),
+              <br> FULLTEXT KEY post_content (post_content) );
+              <br> B. Modifikasi tabel yang sudah ada dengan perintah ALTER TABLE.
+              <br> 1.ALTER TABLE products
+              <br> 2.ADD FULLTEXT(productDescription,productline)
+              <br> menambahkan fasilitas fulltext serach pada table products untuk kolom productsDescription,productLine.
+              <br> C. Membuat index dengan perintah "Create Fulltext index ..."
+              <br> 1.CREATE FULLTEXT INDEX address
+              <br> 2. ON offices(addressLine1, addressLine2)
             </div>
           </div>
 
     </section><!-- #team -->
 
+  
     <!--==========================
       Contact Section
     ============================-->
